@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Karaoke Pip & Pop</title>
 </head>
-<body>
-    <h1>Bienvenidos al Karaoke de Pip & Pop</h1>
+<style>
+    body{
+        background-image: url(1.PNG);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body class="bg-zinc-800 p-10"> 
+    <h1 class="text-white flex justify-center mt-4 mb-11">Bienvenidos al Karaoke de Pip & Pop</h1>
 
     <!--Formulario para agregar canciones-->
+    <div class="flex justify-center">
+        <form id="song_form">
 
-    <form id="song_form">
-        <label for="song_name">Nombre de la canción</label>
-        <input id="song_name" type="text" required>
-        <label for="artist_name">Nombre del artista</label>
-        <input id="artist_name" type="text" required>
-        <label for="song_url">Link de la cancion, de Youtube o Spotify</label>
-        <input id="song_url" type="url" required >
-        <button type="submit">Agregar</button>
-    </form>
+            <div class="p-2"><label class="text-white" for="song_name">Nombre de la canción</label>
+            <input class="rounded ml-2" id="song_name" type="text" required></div>
+            <div class="p-2"><label class="text-white" for="artist_name">Nombre del artista</label>
+            <input class="rounded ml-2" id="artist_name" type="text" required></div>
+            <div class="p-2"></div><label class="text-white" for="song_url">Link de la cancion, de Youtube o Spotify</label>
+            <input class="rounded ml-2" id="song_url" type="url" required ></div>
+            <div class="p-2 flex justify-center mb-5 mt-2"><button class="text-white border rounded p-1 hover:bg-blue-700" type="submit">Agregar</button></div>
 
+         </form>
+    </div>
     <!--Lista de canciones-->
-    <h2>Lista de reproduciones</h2>
-    <ul id="play_list"> </ul>
+    <h2 class="text-white flex justify-center">Lista de reproduciones</h2>
+    <ul class="text-white" id="play_list"> </ul>
 </body>
 <script src="main.js"></script>
 </html>
