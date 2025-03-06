@@ -9,8 +9,8 @@ function addSong(songName, artistName, songUrl){
     listSong.innerHTML = `
         <strong> ${songName} </strong>
         - ${artistName}
-        <a href="${songUrl}" target="_blank" class="border rounded p-1 ml-3 mb-2" >Reproducir</a>
-        <button class="delete-btn border rounded p-1 ml-3 mb-2" > Eliminar </button>
+        <a href="${songUrl}" target="_blank" class="border rounded p-1 ml-3 mb-2 hover:bg-blue-700" >Reproducir</a>
+        <button class="delete-btn border rounded p-1 ml-3 mb-2 hover:bg-blue-700" > Eliminar </button>
     `;
 
 
